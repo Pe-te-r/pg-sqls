@@ -17,10 +17,10 @@ const get_connection=async() => {
 }
 
 
-const readTable = async () => {
+const readTable = async (query:string,variable:any[]=[]) => {
     const client = await get_connection()
     try {
-        const results = await client.query('SELECT * FROM users')
+        const results = await client.query(query,variable)
         console.table(results.rows)
     } catch (error) {
         console.error('Error occured', error)
@@ -29,8 +29,8 @@ const readTable = async () => {
     }
 }
 
-const
+
 
 export const main = async () => {
-    readTable()
+    readTable('SELECT * FROM users')
 }
