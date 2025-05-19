@@ -63,3 +63,7 @@ try {
   client.release();
 }
 ```
+
+Both **Pool** and **Client** receive configuration details that  are useful for a sucessfull connection.
+
+**.query** method is used to execute *sql* statements to the available connection.
