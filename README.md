@@ -47,7 +47,7 @@ try {
 
   * Create a Pool instance.
   * The pool manages multiple client connections internally.
-  * You just acquire a client from the pool when needed (pool.connect()), run queries, then release it.
+  * You just acquire a client from the pool when needed (*pool.connect()*), run queries, then release it.
   * Improves performance by reusing connections.
   * Handles concurrency well.
   
